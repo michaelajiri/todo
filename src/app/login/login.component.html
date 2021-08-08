@@ -1,0 +1,24 @@
+<div class="col-md-6 offset-md-3">
+    <h3>Please Login!</h3>
+
+    <div class="alert alert-warning" *ngIf='invalidLogin'>{{errorMessage}}</div>
+
+    <div>
+        <fieldset class="form-group">
+            <label for="username">Username: </label>
+            <input type="text" class="form-control" id="username" name="username" [(ngModel)]="username"
+                required="required" />
+        </fieldset>
+
+        <fieldset class="form-group">
+            <label for="password">Password: </label>
+            <input type="password" class="form-control" id="password" name="password" [(ngModel)]="password"
+                required="required" />
+        </fieldset>
+
+        <!-- <button (click)=handleLogin() class="btn btn-success">Login</button> -->
+        <!-- <button (click)=handleBasicAuthLogin() class="btn btn-info">Login</button> -->
+        <button (click)=handleJWTAuthLogin() class="btn btn-info">Login</button>
+
+    </div>
+</div>

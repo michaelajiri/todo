@@ -1,0 +1,15 @@
+<h3>Welcome!</h3>
+<div class="container">
+    <div>
+        <p>Welcome {{name}} to Nigeria Development Forum (NDF) Page.
+            You can manage your todos <a routerLink="/todos">here</a>!!!</p>
+        <p>Click here to get customized welcome message
+            <button (click)="getWelcomeMessageWithParameter()" class="btn btn-success">Get Welcome Message</button>
+        </p>
+    </div>
+</div>
+
+<div class="container" *ngIf="welcomeMessageFromService">
+    <h5>Your Customized Welcome Message</h5>
+    {{welcomeMessageFromService}}
+</div>
